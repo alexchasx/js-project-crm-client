@@ -1,0 +1,7 @@
+ehthumbs.db
+Thumbs.db
+.DS_Store
+node_modules
+*_EXAMPLE*
+*_OLD*
+dist

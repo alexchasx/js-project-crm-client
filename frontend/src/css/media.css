@@ -1,0 +1,157 @@
+@media (max-width: 1023px) {
+  .table__td-id {
+    padding-right: 15px;
+  }
+
+  .table__td--action {
+    max-width: 115px;
+  }
+
+  .table__th-name {
+    max-width: 270px;
+  }
+
+  .table__td-created,
+  .table__td-updated,
+  .table__th-date {
+    max-width: 120px;
+  }
+
+  .table__th-date {
+    padding-right: 0;
+  }
+
+  .table__time {
+    display: block;
+    padding-left: 0;
+  }
+
+  .table__th-contacts {
+    width: 100px;
+  }
+
+  .contacts-icons {
+    min-width: 115px;
+  }
+
+  .action-update {
+    margin-bottom: 5px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header {
+    position: fixed;
+    min-width: 100%;
+    height: 90px;
+    background-color: #fff;
+  }
+
+  .section-title {
+    margin-top: 105px;
+  }
+
+  .header__search {
+    width: 100%;
+  }
+
+  .search__input {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .header {
+    position: fixed;
+    margin-bottom: 30px;
+    min-width: 100%;
+    height: 40px;
+    background-color: #fff;
+  }
+
+  .header__container {
+    padding: 0;
+  }
+
+  .header__logo {
+    position: fixed;
+    top: 8px;
+    left: 56%;
+    right: auto;
+    margin-right: -50%;
+    transform: translateX(-50%);
+  }
+
+  .header__logo img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header__search {
+    display: none;
+  }
+
+  .section-title {
+    margin-top: 6px;
+  }
+
+  .table-wrap {
+    padding-top: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .preloader {
+    top: 285px;
+    left: 45%;
+  }
+
+
+  #modal-create,
+  #modal-update,
+  #modal-delete {
+    width: 300px;
+  }
+
+  .form {
+    width: 300px;
+  }
+
+  .form__field {
+    width: 240px;
+  }
+
+  .wrap-add-contact {
+    width: 300px;
+  }
+
+  .render-id {
+    bottom: 4px;
+    left: 61%;
+  }
+
+  .form__cancel {
+    top: 9px;
+    right: 9px;
+  }
+
+  .modal__title {
+    padding: 24px 15px 0;
+  }
+
+  .modal-delete__title {
+    padding-top: 0;
+  }
+
+  .form__fields-wrap,
+  .form__contacts-wrap {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .choices {
+    min-width: 110px;
+  }
+}

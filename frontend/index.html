@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRM - Клиенты</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="#" class="header__logo">
+          <img src="src/img/logo.svg" alt="Skillbus" />
+        </a>
+        <div class="header__search search">
+          <input
+            class="search__input"
+            type="search"
+            id="search"
+            name="q"
+            placeholder="Введите запрос"
+          />
+          <ul class="list-reset auto-completion display-none"></ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container table-wrap">
+        <h1 class="section-title">Клиенты</h1>
+        <table class="table">
+          <thead class="table__head">
+            <tr class="table__tr thead-tr">
+              <th class="table__th table__th-id filter-th">
+                ID
+                <div
+                  class="img-arrow img-arrow--top img-arrow__id sort-active sort-asc"
+                ></div>
+              </th>
+              <th class="table__th table__th-name filter-th">
+                Фамилия Имя Отчество
+                <div class="img-arrow img-arrow--top img-arrow__fio"></div>
+                <span class="name-simbols">А-Я</span>
+              </th>
+              <th class="table__th table__th-date filter-th created-at">
+                Дата и&nbsp;время создания
+                <div class="img-arrow img-arrow--top img-arrow__created"></div>
+              </th>
+              <th class="table__th table__th-date filter-th updated-at">
+                Последние изменения
+                <div class="img-arrow img-arrow--top img-arrow__updated"></div>
+              </th>
+              <th class="table__th table__th-contacts">Контакты</th>
+              <th class="table__th table__th-action">Действия</th>
+            </tr>
+          </thead>
+          <tbody id="client-list" class="table__body">
+            <tr class="table__tr--empty">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="table__btn-add screen-center">Добавить клиента</button>
+
+        <div id="modal-create" class="modal modal-create">
+          <form class="form modal-create__form" action="#" method="POST">
+            <div class="form__cancel modal-create__cancel"></div>
+            <h2 class="modal__title modal-create__title">Новый клиент</h2>
+            <div class="form__fields-wrap">
+              <div class="field-container">
+                <div class="fake-placeholder modal-create__fake-placeholder">
+                  Фамилия<span class="fake-placeholder--required">*</span>
+                </div>
+                <input
+                  class="form__field modal-create__field"
+                  name="surname"
+                  type="text"
+                />
+              </div>
+              <div class="field-container">
+                <div class="fake-placeholder modal-create__fake-placeholder">
+                  Имя<span class="fake-placeholder--required">*</span>
+                </div>
+                <input
+                  class="form__field modal-create__field"
+                  name="name"
+                  type="text"
+                />
+              </div>
+              <div class="field-container">
+                <div class="fake-placeholder modal-create__fake-placeholder">
+                  Отчество
+                </div>
+                <input
+                  class="form__field modal-create__field"
+                  name="lastname"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="form__contacts-wrap"></div>
+            <div class="wrap-add-contact">
+              <button
+                class="btn-reset form__add-contact modal-create__add-contact"
+                type="button"
+              >
+                <div class="plus-circle"></div>
+                Добавить контакт
+              </button>
+            </div>
+            <div class="form__buttons-wrap">
+              <div class="modal__error-message"></div>
+              <button
+                class="btn-reset fill-btn modal-create__submit"
+                type="submit"
+              >
+                Сохранить
+              </button>
+              <button
+                class="btn-reset cancel-btn form__cancel-btn"
+                type="button"
+              >
+                Отмена
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div id="modal-update" class="modal modal-update">
+          <form class="form modal-update__form" action="#" method="POST">
+            <div class="form__cancel modal-update__cancel"></div>
+            <h2 class="modal__title modal-update__title">Изменить данные</h2>
+            <div class="render-id"></div>
+            <div class="form__fields-wrap">
+              <div class="field-container">
+                <div class="fake-placeholder modal-update__fake-placeholder">
+                  Фамилия<span class="fake-placeholder--required">*</span>
+                </div>
+                <input
+                  class="form__field modal-update__field"
+                  name="surname"
+                  type="text"
+                />
+              </div>
+              <div class="field-container">
+                <div class="fake-placeholder modal-update__fake-placeholder">
+                  Имя<span class="fake-placeholder--required">*</span>
+                </div>
+                <input
+                  class="form__field modal-update__field"
+                  name="name"
+                  type="text"
+                />
+              </div>
+              <div class="field-container">
+                <div class="fake-placeholder modal-update__fake-placeholder">
+                  Отчество
+                </div>
+                <input
+                  class="form__field modal-update__field"
+                  name="lastname"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="form__contacts-wrap"></div>
+            <div class="wrap-add-contact">
+              <button
+                class="btn-reset form__add-contact modal-update__add-contact"
+                type="button"
+              >
+                <div class="plus-circle"></div>
+                Добавить контакт
+              </button>
+            </div>
+            <div class="form__buttons-wrap">
+              <div class="modal__error-message"></div>
+              <button
+                class="btn-reset fill-btn modal-update__submit"
+                type="submit"
+              >
+                Сохранить
+              </button>
+              <button
+                class="btn-reset cancel-btn form__delete-btn"
+                type="button"
+              >
+                Удалить клиента
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div id="modal-delete" class="modal modal-delete">
+          <div class="modal-delete__cancel form__cancel"></div>
+          <h2 class="modal-delete__title modal__title">Удалить клиента</h2>
+          <p class="modal-delete__text">
+            Вы&nbsp;действительно хотите удалить данного клиента?
+          </p>
+          <div class="modal__error-message"></div>
+          <button class="btn-reset fill-btn client-delete" type="button">
+            Удалить
+          </button>
+          <button
+            class="btn-reset cancel-btn modal-delete__cancel-btn"
+            type="button"
+          >
+            Отмена
+          </button>
+        </div>
+
+        <div id="shadow" class="modal"></div>
+      </div>
+    </main>
+  </body>
+</html>
